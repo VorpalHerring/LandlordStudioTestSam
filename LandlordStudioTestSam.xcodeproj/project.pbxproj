@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		74366D91251CADC500B0FB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74366D8F251CADC500B0FB76 /* LaunchScreen.storyboard */; };
 		74366D9C251CADC500B0FB76 /* LandlordStudioTestSamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366D9B251CADC500B0FB76 /* LandlordStudioTestSamTests.swift */; };
 		74366DA7251CADC500B0FB76 /* LandlordStudioTestSamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366DA6251CADC500B0FB76 /* LandlordStudioTestSamUITests.swift */; };
+		74366DB8251CAF7600B0FB76 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366DB7251CAF7600B0FB76 /* CurrencyTableViewCell.swift */; };
+		74366DC0251CB55200B0FB76 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366DBF251CB55200B0FB76 /* CurrencyManager.swift */; };
+		74366DC5251CB57300B0FB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366DC4251CB57300B0FB76 /* Currency.swift */; };
+		74366DCB251CB97500B0FB76 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 74366DCA251CB97500B0FB76 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		74366DA2251CADC500B0FB76 /* LandlordStudioTestSamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandlordStudioTestSamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74366DA6251CADC500B0FB76 /* LandlordStudioTestSamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandlordStudioTestSamUITests.swift; sourceTree = "<group>"; };
 		74366DA8251CADC500B0FB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74366DB7251CAF7600B0FB76 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		74366DBF251CB55200B0FB76 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		74366DC4251CB57300B0FB76 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74366DCB251CB97500B0FB76 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +107,16 @@
 		74366D83251CADC400B0FB76 /* LandlordStudioTestSam */ = {
 			isa = PBXGroup;
 			children = (
-				74366D84251CADC400B0FB76 /* AppDelegate.swift */,
-				74366D86251CADC400B0FB76 /* SceneDelegate.swift */,
-				74366D88251CADC400B0FB76 /* ViewController.swift */,
-				74366D8A251CADC400B0FB76 /* Main.storyboard */,
+				74366D92251CADC500B0FB76 /* Info.plist */,
 				74366D8D251CADC500B0FB76 /* Assets.xcassets */,
 				74366D8F251CADC500B0FB76 /* LaunchScreen.storyboard */,
-				74366D92251CADC500B0FB76 /* Info.plist */,
+				74366D84251CADC400B0FB76 /* AppDelegate.swift */,
+				74366D86251CADC400B0FB76 /* SceneDelegate.swift */,
+				74366D8A251CADC400B0FB76 /* Main.storyboard */,
+				74366D88251CADC400B0FB76 /* ViewController.swift */,
+				74366DB7251CAF7600B0FB76 /* CurrencyTableViewCell.swift */,
+				74366DBF251CB55200B0FB76 /* CurrencyManager.swift */,
+				74366DC4251CB57300B0FB76 /* Currency.swift */,
 			);
 			path = LandlordStudioTestSam;
 			sourceTree = "<group>";
@@ -144,6 +155,9 @@
 			dependencies = (
 			);
 			name = LandlordStudioTestSam;
+			packageProductDependencies = (
+				74366DCA251CB97500B0FB76 /* SwiftyJSON */,
+			);
 			productName = LandlordStudioTestSam;
 			productReference = 74366D81251CADC400B0FB76 /* LandlordStudioTestSam.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 74366D78251CADC400B0FB76;
+			packageReferences = (
+				74366DC9251CB97500B0FB76 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 74366D82251CADC400B0FB76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74366DC5251CB57300B0FB76 /* Currency.swift in Sources */,
+				74366DB8251CAF7600B0FB76 /* CurrencyTableViewCell.swift in Sources */,
+				74366DC0251CB55200B0FB76 /* CurrencyManager.swift in Sources */,
 				74366D89251CADC400B0FB76 /* ViewController.swift in Sources */,
 				74366D85251CADC400B0FB76 /* AppDelegate.swift in Sources */,
 				74366D87251CADC400B0FB76 /* SceneDelegate.swift in Sources */,
@@ -587,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74366DC9251CB97500B0FB76 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74366DCA251CB97500B0FB76 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74366DC9251CB97500B0FB76 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74366D79251CADC400B0FB76 /* Project object */;
 }
